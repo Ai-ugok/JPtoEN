@@ -407,8 +407,7 @@ const japaneseToEnglish = async () => {
     body: JSON.stringify({
       messages: messages,
       max_tokens: 50 //レスポンスのトークンの最大数
-    }),
-    headers: { 'Content-Type': 'application/json' }
+    })
   });
 
   // fetch APIを使用してリクエストを送信
@@ -485,8 +484,7 @@ const generateSentence = async () => {
     body: JSON.stringify({
       messages: messages,
       max_tokens: 100 //レスポンスのトークンの最大数
-    }),
-    headers: { 'Content-Type': 'application/json' }
+    })
   });
 
   // fetch APIを使用してリクエストを送信
@@ -545,8 +543,7 @@ const hint = async () => {
     body: JSON.stringify({
       messages: messages,
       max_tokens: 200 //レスポンスのトークンの最大数
-    }),
-    headers: { 'Content-Type': 'application/json' }
+    })
   });
 
   // fetch APIを使用してリクエストを送信
@@ -595,8 +592,7 @@ const correctHint = async () => {
     body: JSON.stringify({
       messages: messages,
       max_tokens: 200 //レスポンスのトークンの最大数
-    }),
-    headers: { 'Content-Type': 'application/json' }
+    })
   });
 
   // fetch APIを使用してリクエストを送信
@@ -650,8 +646,7 @@ const falseHint = async () => {
     body: JSON.stringify({
       messages: messages,
       max_tokens: 200 //レスポンスのトークンの最大数
-    }),
-    headers: { 'Content-Type': 'application/json' }
+    })
   });
 
   // fetch APIを使用してリクエストを送信
@@ -723,8 +718,7 @@ const judgegpt = async () => {
     body: JSON.stringify({
       messages: messages,
       max_tokens: 100 //レスポンスのトークンの最大数
-    }),
-    headers: { 'Content-Type': 'application/json' }
+    })
   });
 
   // fetch APIを使用してリクエストを送信
