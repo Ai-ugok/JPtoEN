@@ -205,12 +205,12 @@
 
   #hintContent {
     display: inline-block;
-    font-size: 20px;
+    font-size: 10px;
   }
 
   #falseHintContent {
     display: inline-block;
-    font-size: 20px;
+    font-size: 10px;
   }
 
   .dragging {
