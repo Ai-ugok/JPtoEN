@@ -203,14 +203,9 @@
     font-size: 30px;
   }
 
-  #hintContent {
+  #Content {
     display: inline-block;
-    font-size: 10px;
-  }
-
-  #falseHintContent {
-    display: inline-block;
-    font-size: 10px;
+    font-size: 30px;
   }
 
   .dragging {
