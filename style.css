@@ -200,17 +200,17 @@
   p {
     margin-left: 15px;
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 30px;
   }
 
   #hintContent {
     display: inline-block;
-    font-size: large;
+    font-size: 30px;
   }
 
   #falseHintContent {
     display: inline-block;
-    font-size: large;
+    font-size: 30px;
   }
 
   .dragging {
