@@ -402,7 +402,7 @@ const japaneseToEnglish = async () => {
   ];
 
   // Requestオブジェクトを作成。
-  const myRequest = new Request('http://ojk-english.deno.dev', {
+  const myRequest = new Request('https://ojk-english.deno.dev', {
     method: 'POST',
     body: JSON.stringify({
       messages: messages,
@@ -480,7 +480,7 @@ const generateSentence = async () => {
   // ９．あなたは問題の作成者です。与えられた日本語の文章を参考にして、使用する単語や表現を変えた新しい日本語の文章を作成してください。
 
   // Requestオブジェクトを作成。
-  const myRequest = new Request('http://ojk-english.deno.dev', {
+  const myRequest = new Request('https://ojk-english.deno.dev', {
     method: 'POST',
     body: JSON.stringify({
       messages: messages,
@@ -540,7 +540,7 @@ const hint = async () => {
   ];
 
   // Requestオブジェクトを作成。
-  const myRequest = new Request('http://ojk-english.deno.dev', {
+  const myRequest = new Request('https://ojk-english.deno.dev', {
     method: 'POST',
     body: JSON.stringify({
       messages: messages,
@@ -590,7 +590,7 @@ const correctHint = async () => {
   ];
 
   // リクエストオプション
-  const myRequest = new Request('http://ojk-english.deno.dev', {
+  const myRequest = new Request('https://ojk-english.deno.dev', {
     method: 'POST',
     body: JSON.stringify({
       messages: messages,
@@ -645,7 +645,7 @@ const falseHint = async () => {
   ];
 
   // Requestオブジェクトを作成。
-  const myRequest = new Request('http://ojk-english.deno.dev', {
+  const myRequest = new Request('https://ojk-english.deno.dev', {
     method: 'POST',
     body: JSON.stringify({
       messages: messages,
@@ -718,7 +718,7 @@ const judgegpt = async () => {
   ];
 
   // Requestオブジェクトを作成。
-  const myRequest = new Request('http://ojk-english.deno.dev', {
+  const myRequest = new Request('https://ojk-english.deno.dev', {
     method: 'POST',
     body: JSON.stringify({
       messages: messages,
