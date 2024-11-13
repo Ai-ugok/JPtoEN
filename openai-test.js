@@ -114,7 +114,7 @@ function placeWords() {
 
 // 配列内の英単語を文章化する関数
 function arrayToSentence(el) {
-  return el.join(" ");
+  return el.join(' ');
 }
 
 /**
@@ -402,7 +402,7 @@ const japaneseToEnglish = async () => {
   ];
 
   // Requestオブジェクトを作成。
-  const myRequest = new Request('http://localhost:8000', {
+  const myRequest = new Request('http://ojk-english.deno.dev', {
     method: 'POST',
     body: JSON.stringify({
       messages: messages,
@@ -480,12 +480,8 @@ const generateSentence = async () => {
   // ９．あなたは問題の作成者です。与えられた日本語の文章を参考にして、使用する単語や表現を変えた新しい日本語の文章を作成してください。
 
   // Requestオブジェクトを作成。
-  const myRequest = new Request('http://localhost:8000', {
+  const myRequest = new Request('http://ojk-english.deno.dev', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${chatGptApiKey}`
-    },
     body: JSON.stringify({
       messages: messages,
       max_tokens: 100 //レスポンスのトークンの最大数
@@ -544,7 +540,7 @@ const hint = async () => {
   ];
 
   // Requestオブジェクトを作成。
-  const myRequest = new Request('http://localhost:8000', {
+  const myRequest = new Request('http://ojk-english.deno.dev', {
     method: 'POST',
     body: JSON.stringify({
       messages: messages,
@@ -594,7 +590,7 @@ const correctHint = async () => {
   ];
 
   // リクエストオプション
-  const myRequest = new Request('http://localhost:8000', {
+  const myRequest = new Request('http://ojk-english.deno.dev', {
     method: 'POST',
     body: JSON.stringify({
       messages: messages,
@@ -649,7 +645,7 @@ const falseHint = async () => {
   ];
 
   // Requestオブジェクトを作成。
-  const myRequest = new Request('http://localhost:8000', {
+  const myRequest = new Request('http://ojk-english.deno.dev', {
     method: 'POST',
     body: JSON.stringify({
       messages: messages,
@@ -722,7 +718,7 @@ const judgegpt = async () => {
   ];
 
   // Requestオブジェクトを作成。
-  const myRequest = new Request('http://localhost:8000', {
+  const myRequest = new Request('http://ojk-english.deno.dev', {
     method: 'POST',
     body: JSON.stringify({
       messages: messages,
