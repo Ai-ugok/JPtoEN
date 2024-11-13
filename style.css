@@ -1,0 +1,257 @@
+/* レスポンシブ（スマホ対応） */
+@media screen and (max-width: 500px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 30px;
+    width: 100%;
+  }
+
+  button {
+    padding: 8px;
+    letter-spacing: 0.05em;
+    margin: 10px 0;
+    border: solid 1px gray;
+    border-radius: 3px;
+  }
+
+  #generate {
+    background-color: seashell;
+    border-width: 1.5px;
+  }
+
+  #answer {
+    background-color: seashell;
+    border-width: 1.5px;
+  }
+
+  #reset {
+    background-color: honeydew;
+  }
+
+  #retry {
+    background-color: seashell;
+    border-width: 1.5px;
+  }
+
+  #newSentence {
+    background-color: seashell;
+    border-width: 1.5px;
+  }
+
+  #anotherSentence {
+    background-color: honeydew;
+  }
+
+  #correct {
+    background-color: aliceblue;
+  }
+
+  #ja {
+    width: 100%;
+    height: 3em;
+    border: 1px solid;
+    padding-left: 0.5em;
+  }
+
+  #randomWord {
+    height: 8em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  #selectedWord {
+    height: 9em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    border: solid 2px;
+    margin-top: 30px;
+    padding: 0.5em;
+  }
+
+  .english {
+    background-color: azure;
+    padding: 5px;
+    border: solid 1px aqua;
+  }
+
+  #answer {
+    margin-top: 10px;
+  }
+
+  #judge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 16px;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
+  p {
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+
+  #content {
+    display: inline-block;
+    font-size: large;
+  }
+
+  .dragging {
+    opacity: 0.5;
+  }
+
+  .over {
+    background-color: rgba(255, 255, 0, 0.3);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #bunpou {
+    /* overflow-y: scroll; */
+    box-shadow: 0px 2px 5px gray;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  #bunpou summary {
+    font-size: 0.75rem;
+  }
+
+  dl {
+    margin-top: 10px;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin-left: 1em;
+  }
+}
+
+/* PC用 */
+@media screen and (min-width: 501px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 300px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  button {
+    padding: 5px;
+    letter-spacing: 0.05em;
+    margin: 5px;
+  }
+
+  #ja {
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    border: 1px solid;
+  }
+
+  #randomWord {
+    display: flex;
+    width: 800px;
+    height: 100px;
+    flex-wrap
+  }
+
+  #selectedWord {
+    display: flex;
+    width: 800px;
+    height: 100px;
+    border: solid 2px;
+    margin-top: 30px;
+  }
+
+  #answer {
+    margin-top: 10px;
+  }
+
+  #judge {
+    margin: 5px;
+    display: flex;
+  }
+
+  p {
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 30px;
+  }
+
+  #hintContent {
+    display: inline-block;
+    font-size: large;
+  }
+
+  #falseHintContent {
+    display: inline-block;
+    font-size: large;
+  }
+
+  .dragging {
+    opacity: 0.5;
+  }
+
+  .english {
+    background-color: azure;
+    margin: 10px;
+    padding: 5px;
+    border: solid 1px aqua;
+    height: 30px;
+  }
+
+  .over {
+    background-color: rgba(255, 255, 0, 0.3);
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #bunpou {
+    width: 800px;
+    /* height: 200px; */
+    /* overflow-y: scroll; */
+    box-shadow: 0px 2px 5px gray;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  dl {
+    margin-top: 10px;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin-left: 1em;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>日→英並び替え英作アプリ</title>
+</head>
+
+<body>
+  <input type="text" id="ja" /><br />
+  <button id="generate" disabled>問題生成</button>
+  <button id="anotherSentence" style="display: none">文章を変更する</button>
+
+  <div id="randomWord" class="box box1">
+    <!-- ここにランダムで英単語が入る -->
+  </div>
+
+  <div id="selectedWord" class="box box2">
+    <!-- ここに英単語をドラッグアンドドロップ -->
+    <!-- 例：<div draggable="true" class="english" id="item1">I　</div>
+    <div draggable="true" class="english" id="item0">like　</div>
+    <div draggable="true" class="english" id="item2">winter.　</div> -->
+  </div>
+
+  <button id="answer" style="display: none">確定する</button>
+  <button id="reset" style="display: none">やりなおす</button><br />
+
+  <div id="judge">
+    <!-- 正解なら○の画像、不正解なら×の画像が表示される -->
+  </div>
+
+  <button id="retry" style="display: none">再挑戦する</button>
+  <button id="correct" style="display: none">正解を表示する</button>
+  <button id="newSentence" style="display: none">新しい日本語の文章を生成する</button>
+
+  <details id="bunpou">
+    <summary>文法のヒント</summary>
+    <div id="hintArea">
+      <!-- ここにヒントが入る -->
+    </div>
+    <!--
+    <dl>
+      <dt>肯定文「～です・～します」のポイント</dt>
+      <dd>第1文型SV：主語＋動詞「誰が何する」</dd>
+      <dd>第2文型SVC：主語＋動詞＋補語「主語＝補語」</dd>
+      <dd>第3文型SVO：主語＋動詞＋目的語「誰が何する何を」</dd>
+      <dd>第4文型SVOO：主語＋動詞＋目的語(人)＋目的語(もの)「誰が何する誰に何を」</dd>
+      <dd>第5文型SVOC：主語＋動詞＋目的語＋補語「目的語＝補語」</dd>
+    </dl>
+    <dl>
+      <dt>疑問文「～ですか・～しますか」のポイント</dt>
+      <dd>be動詞、助動詞の場合→主語とbe動詞または助動詞を反対にする！</dd>
+      <dd>一般動詞の場合→Do(現在形), Does(三人称単数現在形), Did(過去形)を文頭に使う！</dd>
+    </dl>
+    <dl>
+      <dt>否定文「～ではない・～しない」のポイント</dt>
+      <dd>be動詞、助動詞の場合→be動詞または助動詞の後にnot！</dd>
+      <dd>一般動詞の場合→Do(現在形), Does(三人称単数現在形), Did(過去形)の後にnot！</dd>
+    </dl>
+  -->
+  </details>
+
+  <details id="bunpou">
+    <summary>解説</summary>
+    <div id="explainArea">
+      <!-- ここに解説が入る -->
+    </div>
+  </details>
+
+  <script src="openai-test.js" type="module"></script>
+</body>
+
+</html>
