@@ -60,6 +60,8 @@ let hintSentence;
 let falseHintSentence;
 let correctHintSentence;
 
+let judgegptTF
+
 /**
  *  ツール関数
  **/
@@ -207,7 +209,7 @@ answerBtn.addEventListener('click', async () => {
 
   // 正解か不正解かで表示内容を分岐する
   const judge = document.getElementById('judge');
-  if (result) {
+  if (result || judgegptTF=='true') {
     const maru = document.createElement('img');
     maru.src = 'imgs/maru.png';
     judge.appendChild(maru);
@@ -676,7 +678,7 @@ const judgegpt = async () => {
         // 'あなたは問題の正誤判断をします。与えられた日本語の文章を、与えられた英単語の配列の整序問題として英語に訳す際に、与えられた英語の文章が訳として合っている場合は「true」、合っていない場合は「false」と返答してください。また、falseの場合は、その理由も示してください。また、文末のピリオドは基本的に最後についているものとします。'
         // 'あなたは問題の正誤判断をします。与えられた英単語の配列を正しい順番に並び替える際に、与えられた英語の文章が文法的に正しいかどうかを判断してください。正しい場合は「true」、間違っている場合は「false」と返答して下さい。また、falseの場合は、その理由も示してください。また、文末のピリオドは基本的に最後についているものとします。'
         // 'あなたは問題の正誤判断をします。与えられた英語の文章が、文法的に正しいかどうかを判断してください。正しい場合は「true」、間違っている場合は「false」と返答してください。また、falseの場合は、その理由も示してください。また、文末のピリオドは基本的に最後についているものとします。'
-        'あなたは問題の正誤判断をします。与えられた日本語の文章を英語に訳す際に、与えられた英語の文章が文法的に正しいかどうかを判断してください。正しい場合は「true」、間違っている場合は「false」と返答してください。また、trueの場合はなぜ正しいのか、falseの場合はなぜ正しくないのか理由も示してください。副詞の位置が異なっていても、日本語の文章において強調している部分と合っていればtrueとしてください。ピリオドの前に空白があっても考慮しないでください。'
+        'あなたは問題の正誤判断をします。与えられた日本語の文章を英語に訳す際に、与えられた英語の文章が文法的に正しいかどうかを判断してください。正しい場合は「true」、間違っている場合は「false」と返答してください。また、falseの場合はなぜ正しくないのか理由も示してください。副詞の位置が異なっていても、日本語の文章において強調している部分と合っていればtrueとしてください。ピリオドの前に空白があっても考慮しないでください。'
     },
     {
       role: 'user',
@@ -696,7 +698,7 @@ const judgegpt = async () => {
     },
     {
       role: 'assistant',
-      content: 'true　理由：この日本語の文章では「検索するとき」を強調しているので、trueです。'
+      content: 'true'
     },
     {
       role: 'user',
@@ -724,6 +726,8 @@ const judgegpt = async () => {
   // fetch APIを使用してリクエストを送信
   const res = await fetch(myRequest);
   const json = await res.json();
+
+  judgegptTF = json.choices[0].message.content;
 
   // JSONレスポンスからメッセージを取得してコンソールに出力
   console.log(JSON.stringify(json), null, 2);
