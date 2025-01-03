@@ -688,11 +688,11 @@ const judgegpt = async () => {
     },
     {
       role: 'assistant',
-      content: 'false'
+      content: 'false　理由：mainlyの位置が違います。また、ピリオドの前に空白があります。'
     },
     {
       role: 'user',
-      content: '副詞の位置が異なっていても、日本語の文章において強調している部分と合っていればtrueとしてください。'
+      content: '副詞の位置が異なっていても、日本語の文章において強調している部分と合っていればtrueとしてください。ピリオドの前に空白があっても考慮しないでください。'
     },
     {
       role: 'assistant',
